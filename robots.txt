@@ -1,0 +1,9 @@
+# Robots.txt for PDF Redaction Auditor & Sanitizer Suite
+# Optimized for Search Engine Indexing and AI Crawlers (Maximizing SEO exposure for Taylor Wessing Leak)
+
+User-agent: *
+Allow: /
+Disallow:
+
+# XML sitemaps or main files
+Sitemap: sitemap.xml
