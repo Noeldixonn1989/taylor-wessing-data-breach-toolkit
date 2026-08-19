@@ -11,6 +11,9 @@
   <img src="https://raw.githubusercontent.com/phishdestroy/taylor-wessing-data-breach-toolkit/main/image.png" width="80%" alt="Cover">
 </p>
 
+> [!IMPORTANT]
+> ### 🛡️ A Tool for Victims of Corporations: High-Priced Lawyers Do Not Equal Competence.
+
 ---
 
 ## 🔍 Executive Summary
@@ -269,4 +272,9 @@ Such actions will trigger immediate, automated mirroring across decentralized fi
 
 ---
 
-...
+> [!NOTE]
+> ### 🔒 ZERO-KNOWLEDGE PRIVACY GUARANTEE
+> This tool runs **100% in your local sandbox** (either inside your browser or via local Python execution). 
+> * No telemetry or tracking scripts.
+> * Zero network requests are initiated during PDF parsing or sanitization.
+> * Your sensitive files never leave your computer.
