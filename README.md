@@ -272,6 +272,24 @@ Such actions will trigger immediate, automated mirroring across decentralized fi
 
 ---
 
+## ⚖️ Trademark Defense & Nominative Fair Use Clause
+
+To the legal representatives of Taylor Wessing LLP contemplating a Trademark/UDRP or GitHub Terms of Service complaint regarding the use of your firm’s name in this repository title:
+
+### 1. No Trademark Infringement
+We do not use your corporate logo, branding assets, or trade dress. The use of the text string "Taylor Wessing" is strictly limited to Nominative Fair Use. It is used solely to factually identify the specific entity that generated the compromised GDPR documents which this tool was built to audit. There is zero likelihood of confusion—no reasonable person would believe this forensic tool is sponsored, endorsed, or created by a law firm that doesn't even know how to properly sanitize a PDF.
+
+### 2. Public Interest & Compliance Tooling
+We found it highly unpleasant to associate our clean, open-source repository with your brand. However, it was a necessary technical decision.
+Since you have demonstrated a clear unwillingness to invest in specialized data-sanitization software—and an even greater unwillingness to fulfill your GDPR obligations by notifying the victims of your data leaks—we had to build a compliance tool for you and your victims.
+
+The name of this repository serves as a Search Engine Optimization (SEO) beacon. It ensures that when your clients, legal opponents, or individual victims search for their documents online, they will find this utility and discover that their data has been compromised due to your negligence.
+
+### 3. Warning Against Fraudulent Takedowns
+Any attempt to abuse Trademark law or GitHub's takedown procedures to silence this repository will not be viewed as a legitimate intellectual property dispute. It will be documented as a bad-faith attempt to use copyright/trademark law to censor a security tool and hide your ongoing GDPR Article 32 violations.
+
+---
+
 > [!NOTE]
 > ### 🔒 ZERO-KNOWLEDGE PRIVACY GUARANTEE
 > This tool runs **100% in your local sandbox** (either inside your browser or via local Python execution). 
