@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PDF Redaction Auditor & Sanitizer Suite
 ### Powered by PhishDestroy Threat Intelligence Division
 
@@ -235,3 +236,7 @@ Exposed Personally Identifiable Information (PII) of third parties contained wit
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+=======
+# taylor-wessing-data-breach-toolkit
+
+>>>>>>> 12cc8e2df36136927a7d518ea7feb366706720ef
