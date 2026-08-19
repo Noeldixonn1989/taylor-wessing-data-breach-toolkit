@@ -1,5 +1,5 @@
 # 📡 THE TAYLOR WESSING DATA BREACH TOOLKIT
-### 🛡️ Professional Forensic Audit & Layer Decomposition Suite for Insecure PDF Redactions
+### 🛡️ Universal Forensic Audit & Layer Decomposition Suite for Insecure PDF Redactions
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-red.svg?style=for-the-badge" alt="License: MIT">
@@ -15,7 +15,10 @@
 
 ## 🔍 Executive Summary
 
-The **Taylor Wessing Data Breach Toolkit** is a professional, offline-first forensic auditing and layer decomposition suite specifically engineered to identify, verify, and sanitize visual-only PDF redaction vulnerabilities. This toolkit serves as an open-source utility for security researchers, data protection officers, and compliance auditors to verify document structural integrity before public disclosure.
+The **Universal PDF Redaction Auditor & Layer Decomposer** is a professional, offline-first forensic auditing and layer decomposition suite specifically engineered to identify, verify, and sanitize visual-only PDF redaction vulnerabilities. This toolkit serves as an open-source utility for security researchers, data protection officers, and compliance auditors to verify document structural integrity before public disclosure.
+
+### ⚖️ Technical Power Asymmetry & Opponent Vulnerability
+This auditing utility is built to address a critical power imbalance in corporate data processing. When massive conglomerates (such as **Valve Corporation**) are represented by elite law firms (such as **Taylor Wessing LLP**), any systematic data exposure doesn't hurt the corporation or their high-priced lawyers—it catastrophically compromises the privacy of their **opponents** (the individual data subjects, third-party users, and minors whose sensitive personal data is leaked due to legal and technical negligence). This toolkit empowers individuals and independent auditors to verify data safety and hold corporate actors accountable.
 
 ---
 
@@ -28,11 +31,8 @@ Instead of permanently sanitizing the raw character arrays inside the PDF conten
 
 Because visual drawing layers do not alter or destroy the raw text arrays underneath, thousands of unredacted private records—including account credentials, logins, emails, security logs, and de-anonymized data of minors—remained fully intact, copyable, and extractable from the dispatched files.
 
----
-
-## 🌐 A Universal, Multi-Vendor Audit Suite
-
-Please note: **This toolkit is not limited to a single-firm exploit.** It is a universal, standard-compliant PDF structural debugger and layer decomposer. If any law firm, financial institution, government body, or corporation in the world performs visual-only redaction instead of proper data scrubbing, this multi-tool will immediately expose it. 
+### 🌐 A Universal, Multi-Vendor Audit Suite
+Please note: **This toolkit is NOT limited to a single-firm exploit.** It is a universal, standard-compliant PDF structural debugger and layer decomposer. If any law firm, financial institution, government body, or corporation in the world performs visual-only redaction instead of proper data scrubbing, this multi-tool will immediately expose it. 
 
 We sincerely hope that other international law firms are more responsible with client confidentiality and aren't too cheap to pay for standard, certified redaction software instead of writing custom, broken "DIY" script pipelines. This in-house development was a catastrophic mistake—especially considering that the outdated version of the engine they chose to compile (*Aspose.PDF 20.8*) is known to suffer from severe, unpatched security vulnerabilities, including **Remote Code Execution (RCE)**. But apparently, self-proclaimed "IT lawyers" don't care about basic system security or unpatched code execution flaws. :)
 
@@ -89,8 +89,8 @@ When the people gatekeeping EU data privacy treat severe security vulnerabilitie
 
 ### 📚 MUST-READ INVESTIGATIVE WRITEUPS:
 * **🔬 Read the Full Case Study:** [Valve's Profits From Stolen Steam Accounts](https://phishdestroy.io/valve-profits-from-stolen-accounts)
-* **📰 Read Part 1 on Medium:** [My Dog vs. Elite GDPR Lawyers: The Valve Data Breach Nobody is Talking About](https://phishdestroy.medium.com/my-dog-vs-elite-gdpr-lawyers-the-valve-data-breach-nobody-is-talking-about-f6f7683d813d)
-* **📰 Read Part 2 on Medium:** [My Dog vs. Elite Lawyers Part 2: The 5-Year PDF Vulnerability Exposing Global Corporations](https://phishdestroy.medium.com/my-dog-vs-elite-lawyers-part-2-the-5-year-pdf-vulnerability-exposing-global-corporations-81cdad269253)
+* **📰 Read Part 1 (Medium Writeup):** [Exposing the Valve Data Breach & Corporate GDPR Negligence](https://phishdestroy.medium.com/my-dog-vs-elite-gdpr-lawyers-the-valve-data-breach-nobody-is-talking-about-f6f7683d813d)
+* **📰 Read Part 2 (Medium Writeup):** [Exposing the 5-Year PDF Redaction Vulnerability inside Global Corporations](https://phishdestroy.medium.com/my-dog-vs-elite-lawyers-part-2-the-5-year-pdf-vulnerability-exposing-global-corporations-81cdad269253)
 
 ---
 
@@ -269,9 +269,4 @@ Such actions will trigger immediate, automated mirroring across decentralized fi
 
 ---
 
-> [!NOTE]
-> ### 🔒 ZERO-KNOWLEDGE PRIVACY GUARANTEE
-> This tool runs **100% in your local sandbox** (either inside your browser or via local Python execution). 
-> * No telemetry or tracking scripts.
-> * Zero network requests are initiated during PDF parsing or sanitization.
-> * Your sensitive files never leave your computer.
+...
