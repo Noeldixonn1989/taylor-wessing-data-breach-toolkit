@@ -110,7 +110,39 @@ python decensor.py -i compromised.pdf -o unmasked.pdf -m both
 * `-t`, `--threshold`: RGB channel upper threshold (0.0 to 1.0) to classify "black" paths in overlay mode (Default: `0.1`).
 
 ---
+⚠️ Why This Tool Exists: The Taylor Wessing / Valve Case Study
+To understand the devastating scale of this vulnerability, look no further than elite corporate law firms.
 
+In October 2023, the IT-law division of Taylor Wessing LLP, acting for Valve Corporation (Steam), responded to a GDPR Article 15 request. Instead of properly sanitizing the document, they used outdated software (Aspose.PDF 20.8) to apply visual black boxes over 830 pages of highly sensitive PII. Thousands of de-anonymized Steam logins, emails, and third-party chat logs of minors were fully exposed.
+
+The Catalyst for This Release:
+When the PhishDestroy Intelligence Division formally notified Taylor Wessing of this catastrophic data breach (complete with forensic metadata and evidence of their technical failure), their lead lawyer, Dr. Patrick Zurheide, chose a deeply concerning response strategy.
+
+Instead of an adequate, professional acknowledgment or immediate GDPR containment, Dr. Zurheide decided to play arrogant legal word games. He feigned ignorance, attempted to dismiss the technical reality as "entertaining," and implicitly threatened the researchers.
+
+This response made one thing crystal clear: Taylor Wessing and its IT-law "Doctors" operate under the delusion that they are the law, the judge, and the jury. They have consciously chosen to ignore a massive technical vulnerability in favor of corporate cover-ups and intimidation tactics.
+
+Because we do not intend to waste time communicating with inadequate legal clowns who prioritize their egos over the safety of minor EU citizens, we are releasing this tool to the public.
+
+There is a high probability that Taylor Wessing has been dispatching similarly compromised documents for years across their entire corporate client portfolio. Since they refuse to audit themselves, we are giving the public the power to audit them.
+
+If elite lawyers billing hundreds of euros an hour can make this mistake, anyone can. This tool was built to ensure journalists, regulators, and individuals can audit the files they receive—or files they intend to send—to prevent similar data disasters.
+
+---
+⚠️ The Hypocrisy of "Elite IT Law" (Why We Chose GitHub)
+Everywhere you look, Taylor Wessing LLP loudly markets itself as a pioneer in "IT Law" and a premier cybersecurity counsel for global tech mega-corporations.
+
+Yet, behind this elite and highly expensive facade, the reality is deeply alarming. They are cutting corners and cheaping out on basic IT infrastructure, relying on severely outdated, flawed software (Aspose.PDF 20.8 from October 2025?) to process highly sensitive GDPR data.
+
+When the PhishDestroy Intelligence Division confronted their lead IT-lawyer, Dr. Patrick Zurheide, with undeniable forensic proof that their cheap software caused a massive data breach—leaking the de-anonymized Steam logins and chat logs of minors—he didn't initiate a security protocol. Instead, he chose to play arrogant word games and literally mocked the situation as "entertaining".
+
+We find this combination of extreme technical negligence and arrogant dismissal of a data breach deeply disturbing.
+
+Because Taylor Wessing’s primary clients—and their legal opponents—operate directly in the tech and IT spheres, we believe GitHub is the absolute most appropriate place to host this open-source multi-tool.
+
+We are deploying this auditing utility directly to the global IT community. If a law firm claiming to specialize in "IT Law" thinks data breaches are a joke, then every developer, tech company, and security researcher must have the tools to independently audit the "elite" documents they receive from them.
+
+---
 ## 📝 Core Implementation Walkthrough
 
 ### 1. Python Stream-Level Operator Swapping
