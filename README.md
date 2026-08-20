@@ -1,3 +1,12 @@
+---
+title: Taylor Wessing Data Breach Toolkit
+emoji: 🛡️
+colorFrom: red
+colorTo: gray
+sdk: static
+pinned: false
+---
+
 # 📡 THE TAYLOR WESSING DATA BREACH TOOLKIT
 ### 🛡️ Universal Forensic Audit & Layer Decomposition Suite for Insecure PDF Redactions
 
@@ -60,7 +69,7 @@ Below is the exact, unedited response received from **Dr. Patrick Zurheide** (Sa
 Instead of initiating a GDPR Article 33 breach notification, he chose to write this:
 
 > **From:** p.zurheide@taylorwessing.com
-> **Date:** October 2023
+> **Date:** August 19, 2026
 > 
 > "Guten Tag PhishDestroy-Team,
 > 
@@ -166,7 +175,7 @@ python decensor.py -i compromised.pdf -o unmasked.pdf
 
 ---
 
-## 📝 CODE WALKTHROUGH
+## 🔍 CODE WALKTHROUGH
 
 <details>
 <summary><b>🐍 View Python Global Stream Sanitizer</b></summary>

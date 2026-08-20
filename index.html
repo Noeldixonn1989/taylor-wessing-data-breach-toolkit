@@ -763,10 +763,10 @@
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 8px;">
                         <a href="https://phishdestroy.medium.com/my-dog-vs-elite-gdpr-lawyers-the-valve-data-breach-nobody-is-talking-about-f6f7683d813d" target="_blank" style="color: var(--accent-amber); font-weight: 800; font-size: 0.75rem; text-decoration: underline; text-transform: uppercase; letter-spacing: 0.5px;">
-                            📖 Part 1: My Dog vs. Elite GDPR Lawyers (Medium Writeup) →
+                            📖 Part 1: Exposing the Valve Data Breach & Corporate GDPR Negligence (Medium Writeup) →
                         </a>
                         <a href="https://phishdestroy.medium.com/my-dog-vs-elite-lawyers-part-2-the-5-year-pdf-vulnerability-exposing-global-corporations-81cdad269253" target="_blank" style="color: var(--accent-amber); font-weight: 800; font-size: 0.75rem; text-decoration: underline; text-transform: uppercase; letter-spacing: 0.5px;">
-                            📖 Part 2: The 5-Year PDF Vulnerability Exposing Global Corporations (Medium Writeup) →
+                            📖 Part 2: Exposing the 5-Year PDF Redaction Vulnerability inside Global Corporations (Medium Writeup) →
                         </a>
                         <a href="https://phishdestroy.io/valve-profits-from-stolen-accounts" target="_blank" style="color: var(--accent-amber); font-weight: 800; font-size: 0.75rem; text-decoration: underline; text-transform: uppercase; letter-spacing: 0.5px;">
                             🔬 Full Case Study: Valve's Profits From Stolen Steam Accounts →
@@ -861,10 +861,10 @@
     <span class="code-keyword">const</span> indirectObjects = context.enumerateIndirectObjects();
     
     <span class="code-comment">// Enumerate and scan ALL indirect streams in the document context (Page Contents, Form XObjects, patterns)</span>
-    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-string">0</span>; i &lt; indirectObjects.length; i++) {
+    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = 0; i &lt; indirectObjects.length; i++) {
         <span class="code-keyword">const</span> [ref, pdfObject] = indirectObjects[i];
         
-        <span class="code-comment">// Duck-typing check: Is this object a stream? (survives JS minification/obfuscation)</span>
+        // Duck-typing check: Is this object a stream? (survives JS minification/obfuscation)
         <span class="code-keyword">if</span> (pdfObject &amp;&amp; <span class="code-keyword">typeof</span> pdfObject.getContents === <span class="code-string">'function'</span> &amp;&amp; pdfObject.dict) {
             <span class="code-keyword">const</span> dict = pdfObject.dict;
             <span class="code-keyword">const</span> type = dict.get(PDFName.of(<span class="code-string">'Type'</span>));
@@ -877,19 +877,19 @@
             
             <span class="code-keyword">try</span> {
                 <span class="code-comment">// Decompress and read raw bytes using the official decodePDFRawStream decoder</span>
-                <span class="code-keyword">const</span> rawData = decodePDFRawStream(pdfObject).decode();
+                <span class="code-comment">const rawData = decodePDFRawStream(pdfObject).decode();</span>
                 
                 <span class="code-comment">// Decode losslessly using Latin-1 byte mapping</span>
-                <span class="code-keyword">const</span> text = Array.from(rawData, byte =&gt; String.fromCharCode(byte)).join(<span class="code-string">''</span>);
+                <span class="code-comment">const text = Array.from(rawData, byte =&gt; String.fromCharCode(byte)).join('');</span>
                 
                 <span class="code-comment">// Locate "re" (rectangle) drawing instructions followed by filled operators (f, F, b, B, f*, F*, b*, B*)</span>
-                <span class="code-comment">// and replace the filling operator with "n" (new path / no-fill), preserving exact separator spacing/newlines</span>
+                // and replace the filling operator with "n" (new path / no-fill), preserving exact separator spacing/newlines</span>
                 <span class="code-keyword">const</span> modifiedText = text.replace(<span class="code-string">/re(\s+)([fFbB]\*?)(?=\s|$)/g</span>, <span class="code-string">'re$1n'</span>);
                 
                 <span class="code-keyword">if</span> (text !== modifiedText) {
                     <span class="code-comment">// Losslessly re-encode Latin-1 string back to Uint8Array bytes</span>
                     <span class="code-keyword">const</span> modifiedData = <span class="code-keyword">new</span> <span class="code-class">Uint8Array</span>(modifiedText.length);
-                    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> k = <span class="code-string">0</span>; k &lt; modifiedText.length; k++) {
+                    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> k = 0; k &lt; modifiedText.length; k++) {
                         modifiedData[k] = modifiedText.charCodeAt(k) &amp; <span class="code-string">0xff</span>;
                     }
                     
@@ -898,18 +898,18 @@
                     
                     <span class="code-comment">// Preserve original stream dictionary keys (like Subtype, BBox, Resources etc. for Form XObjects)</span>
                     <span class="code-keyword">const</span> keys = dict.keys();
-                    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> k = <span class="code-string">0</span>; k &lt; keys.length; k++) {
+                    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> k = 0; k &lt; keys.length; k++) {
                         <span class="code-keyword">const</span> key = keys[k];
-                        <span class="code-keyword">if</span> (key !== PDFName.of(<span class="code-string">'Filter'</span>) &amp;&amp; key !== PDFName.of(<span class="code-string">'Length'</span>)) {
+                        if (key !== PDFName.of('Filter') && key !== PDFName.of('Length')) {
                             newStreamObj.dict.set(key, dict.get(key));
                         }
                     }
                     
-                    <span class="code-comment">// Assign the new stream back to the original reference in-place</span>
+                    // Assign the new stream back to the original reference in-place
                     context.assign(ref, newStreamObj);
                 }
-            } <span class="code-keyword">catch</span> (err) {
-                <span class="code-keyword">continue</span>;
+            } catch (err) {
+                continue;
             }
         }
     }
