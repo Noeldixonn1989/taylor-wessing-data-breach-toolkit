@@ -1,12 +1,3 @@
----
-title: Taylor Wessing Data Breach Toolkit
-emoji: 🛡️
-colorFrom: red
-colorTo: gray
-sdk: static
-pinned: false
----
-
 # 📡 THE TAYLOR WESSING DATA BREACH TOOLKIT
 ### 🛡️ Universal Forensic Audit & Layer Decomposition Suite for Insecure PDF Redactions
 
